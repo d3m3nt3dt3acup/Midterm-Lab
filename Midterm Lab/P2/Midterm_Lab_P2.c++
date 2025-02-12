@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <cstdint>
 
 void check_password(std::string correct_password, std::string input_password);
 void php_to_usd(double *pesos);
