@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <cstdint>
 
 void check_PIN(int *correct_PIN, int *input_PIN);
 void deposit(double *balance, double *deposit_amount);
