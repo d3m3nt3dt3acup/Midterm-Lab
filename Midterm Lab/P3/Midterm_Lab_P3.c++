@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdint>
 
 void draw_square(int *number);
 void draw_right_triangle(int *number);
@@ -12,6 +13,14 @@ int main()
     int number; 
     std::cout << "Enter a number: "; 
     std::cin >> number;
+    while (!std::cin)
+    {
+        std::cin.clear();
+        std::cin.ignore(INT64_MAX, '\n');
+        std::cout << "Invalid input.\n"
+                  << "Enter a number: ";
+        std::cin >> number;
+    }
 
     draw_square(&number);
     std::cout << '\n';
